@@ -13,18 +13,23 @@ function isPalindrome(str){
 
 
 function arrayMaxMin(arr){
-    let arrNovo = []
-   for(let i = 0; i < arr; i++){
-
-    
-   }
- 
+    let novoArray1 = []
+    for(let i = 0; i < arr.length; i++ ){
+    let max1 = Math.max(...arr)
+    let min = Math.min(...arr)
+    novoArray1.unshift(min)
+    novoArray1.push(max1) 
+     return novoArray1
+    }   
 }
-arrayMaxMin()
 
-let arr = [1,52,59,16,13,9]
-let max = Math.min(...arr)
-console.log(max);
+
+
+
+
+
+
+
 
 
 
