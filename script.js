@@ -1,26 +1,36 @@
-function isPalindrome(str){
-    let l = str.length -1;
+
+function  isPalindrome (str){
+    let l = str.length ;
     for(let i = 0; i < l;i++){
-    let x = str [l];
-    let y = str [l-i];
-    if (x == y){
+        let primeiroLetra = str [0].toLowerCase() ;
+        console.log(primeiroLetra);
+        let segundaLetra = str[1].toLowerCase()  
+        console.log(segundaLetra);
+        let segundaFrase = str[i + 2].toLowerCase() 
+        console.log(segundaFrase);
+        let penultimoLetra = str[l - 2].toLowerCase()
+        console.log(penultimoLetra);
+         let ultimaLetra = str[l - 1].toLowerCase()
+        console.log(ultimaLetra);
+    if (primeiroLetra == ultimaLetra && segundaLetra == penultimoLetra || segundaFrase == penultimoLetra){
         return true;
-    }
+        } 
     return false
-}
+    }
 
 }
 
-
+ 
 function arrayMaxMin(arr){
-    let novoArray1 = []
-    for(let i = 0; i < arr.length; i++ ){
-    let max1 = Math.max(...arr)
-    let min = Math.min(...arr)
-    novoArray1.unshift(min)
-    novoArray1.push(max1) 
-     return novoArray1
-    }   
+    let novoArry = [] 
+    for(let i = 0; i < arr.length ; i++){
+     let maior = Math.max(...arr)
+    let menor = Math.min(...arr)
+    novoArry.unshift(menor)
+    novoArry.push(maior)
+    return novoArry
+    }
+  
 }
 
 
@@ -28,40 +38,3 @@ function arrayMaxMin(arr){
 
 
 
-
-
-
-
-
-/*
-O nome da função deve ser arrayMaxMin;
-A função deverá receber o array por parâmetro;
-Sua função deve obrigatoriamente utilizar laço de repetição para percorrer e analisar o array recebido por parâmetro;
-Sua função deve retornar um novo array onde no índice 0 será apresentado o valor mínimo e no índice 1 o valor máximo.
-Dicas
-Utilize variáveis auxiliares para armazenar, ao longo do looping, o maior e menor número encontrados até o momento;
-Inicie suas variáveis auxiliares com o número 0, visto que os números dispostos dentro do array serão sempre iguais ou maiores que 1. Ex. arr[n] >= 1;
-Monte seu laço de repetição percorrendo todos os valores do array;
-Monte o array de retorno com os valores armazenados nas variáveis auxiliares, mas deixe esse passo para ser executado após o laço de repetição.
-
-
-
-
-
-Para desenvolver essa tarefa você deve cumprir alguns requisitos:
-
-O nome da função deve ser isPalindrome;
-A função deverá receber a palavra/frase por parâmetro;
-A função não deve diferenciar letras maiúsculas de minusculas;
-Sua função deve ser capaz de analisar frases, não apenas palavras;
-Sua função deve obrigatoriamente utilizar laço de repetição para percorrer e analisar o parâmetro recebido;
-Sua função deve retornar true se o parâmetro recebido for um palíndromo, e false caso não seja; */ 
-// 
-
-//[^A-Z] corresponde a tudo o que não estiver envolvido entre A e Z
-
-//[^a-z] corresponde a tudo o que não estiver envolvido entre a e z
-
-//[^0-9] corresponde a tudo o que não estiver envolvido entre 0 e 9
-
-//[^_] corresponde a tudo o que não for _
