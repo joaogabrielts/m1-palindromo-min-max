@@ -1,36 +1,38 @@
 
-function  isPalindrome (str){
-    let l = str.length ;
-    for(let i = 0; i < l;i++){
-        let primeiroLetra = str [0].toLowerCase() ;
-        console.log(primeiroLetra);
-        let segundaLetra = str[1].toLowerCase()  
-        console.log(segundaLetra);
-        let segundaFrase = str[i + 2].toLowerCase() 
-        console.log(segundaFrase);
-        let penultimoLetra = str[l - 2].toLowerCase()
-        console.log(penultimoLetra);
-         let ultimaLetra = str[l - 1].toLowerCase()
-        console.log(ultimaLetra);
-    if (primeiroLetra == ultimaLetra && segundaLetra == penultimoLetra || segundaFrase == penultimoLetra){
-        return true;
-        } 
-    return false
-    }
 
+function isPalindrome (str){
+    let resultAoContrario = ""
+    let palavraAoNormal = "" 
+    let len = str.length - 1
+    for(let i = len; i >= 0; i--){
+        resultAoContrario += str[i]    
+    }
+     let palavra = resultAoContrario.toLowerCase().replace(/\s/g, "") 
+     console.log(palavra);
+     let palavraFrase = str.toLowerCase().replace(/\s/g, "") 
+    
+     if(palavra === palavraFrase){
+         return true
+     }
+     return false    
 }
 
- 
-function arrayMaxMin(arr){
-    let novoArry = [] 
-    for(let i = 0; i < arr.length ; i++){
-     let maior = Math.max(...arr)
-    let menor = Math.min(...arr)
-    novoArry.unshift(menor)
-    novoArry.push(maior)
-    return novoArry
+
+
+function arrayMaxMin(array) {
+    let maiorNumero = array[0];
+    let menorNumero = array[0];
+
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] > maiorNumero) {
+            maiorNumero = array[i];
+        }
+        if (array[i] < menorNumero) {
+            menorNumero = array[i];
+        }
     }
-  
+
+    return [menorNumero,maiorNumero];
 }
 
 
