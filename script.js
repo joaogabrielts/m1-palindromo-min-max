@@ -2,7 +2,7 @@
 
 function isPalindrome (str){
     let resultAoContrario = ""
-    let palavraAoNormal = "" 
+  
     let len = str.length - 1
     for(let i = len; i >= 0; i--){
         resultAoContrario += str[i]    
